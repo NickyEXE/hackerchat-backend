@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.permit(:username, :content)
+    params.permit(:username, :content, :channel_id)
   end
 
 end

@@ -10,6 +10,11 @@
 freddy = User.create(username: "1NiteAtFreddys")
 mike = User.create(username: "NotThatMikeMyers")
 
-freddy.messages.create(content: "Starting a new movie where I kill a bunch of coding school students. Calling it Freddy vs. JSON")
-freddy.messages.create(content: "Honestly I've found everyone's nightmares are bad enough without my help today.")
-mike.messages.create(content: "Freddy curses too much for my taste - Michael Myers")
+random = Channel.create(name: "random")
+murder = Channel.create(name: "my-favorite-murder")
+
+freddy.messages.create(content: "Starting a new movie where I kill a bunch of coding school students. Calling it Freddy vs. JSON", channel: murder)
+freddy.messages.create(content: "Honestly I've found everyone's nightmares are bad enough without my help today.", channel: random)
+mike.messages.create(content: "Freddy curses too much for my taste.", channel: random)
+mike.messages.create(content: "Y'all ever see this movie 'The Babysitters Club'?", channel: murder)
+freddy.messages.create(content: "I don't think people get that I have dreams too, you know?", channel: random)
